@@ -27,7 +27,7 @@ public class AccountPage extends LoginPage {
     }
 
     public AccountPage clickDeposit() {
-        driver.findElement(By.xpath("//body/div[1]/div[1]/div[2]/div[1]/div[3]/button[2]")).click();
+        driver.findElement(By.cssSelector("[ng-class='btnClass2']")).click();
         return this;
     }
 
