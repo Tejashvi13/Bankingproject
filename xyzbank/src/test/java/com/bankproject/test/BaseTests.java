@@ -20,7 +20,7 @@ public class BaseTests {
     
         driver = new ChromeDriver(dc);
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.navigate().to("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login");
     }

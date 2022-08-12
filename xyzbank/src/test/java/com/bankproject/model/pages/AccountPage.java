@@ -12,13 +12,13 @@ public class AccountPage extends LoginPage {
     }
     
     public CustomerPage clickLogoutButton() {
-        driver.findElement(By.xpath("//button[contains(text(),'Logout')]")).click();
+        driver.findElement(By.cssSelector(".btn.logout")).click();
         return new CustomerPage(driver);
     }
 
     public String getLoginInfo() {
         return new WebDriverWait(driver, Duration.ofSeconds(60)).until(
-            d -> d.findElement(By.xpath("//span[contains(text(),'Harry Potter')]")).getText());
+            d -> d.findElement(By.cssSelector(".fontBig.ng-binding")).getText());
     }
 
     public AccountPage setInput(String input, String id) {
