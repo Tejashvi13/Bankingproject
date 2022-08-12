@@ -11,12 +11,12 @@ public class LoginPage {
     }
 
     public CustomerPage CusLoginButton() {
-        driver.findElement(By.xpath("//button[contains(text(),'Customer Login')]")).click();
+        driver.findElement(By.cssSelector("[ng-click='customer()']")).click();
         return new CustomerPage(driver);
     }  
 
     public ManagerPage ManagerLoginButton() {
-        driver. findElement(By.xpath("//button[contains(text(),'Bank Manager Login')]")).click();
+        driver. findElement(By.cssSelector("[ng-click='manager()']")).click();
         return new ManagerPage(driver);
     }
 }
