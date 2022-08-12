@@ -43,9 +43,7 @@ public class ManagerPage extends LoginPage {
                 Alert alert = driver.switchTo().alert();
                 alertText = alert.getText();
                 alert.accept();
-            } catch (NoAlertPresentException e ) {
-                e.printStackTrace();
-            }
+            } catch (NoAlertPresentException e ) {}
         }  
         return alertText;
     }
